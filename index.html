@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="./Images/pngtree-letter-n-logo-png-image_8999318.png" type="image/x-icon">
+    <script
+      src="https://kit.fontawesome.com/df3b93f7cb.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <nav>
+      <header>
+        <div class="heading">
+          <h1>Nishith Vadla</h1>
+          <i onclick="handleHamburger()" class="fa-solid fa-bars"></i>
+        </div>
+        <ul>
+          <li onclick="document.querySelector('.home').scrollIntoView()">
+            Home
+          </li>
+          <li onclick="document.querySelector('.about').scrollIntoView()">
+            About
+          </li>
+          <li onclick="document.querySelector('.about').scrollIntoView()">
+            Skills
+          </li>
+          <li onclick="document.querySelector('.about').scrollIntoView()">
+            Experience
+          </li>
+          <li onclick="document.querySelector('.projects').scrollIntoView()">
+            Projects
+          </li>
+          <li onclick="document.querySelector('.contact').scrollIntoView()">
+            Contact
+          </li>
+        </ul>
+      </header>
+    </nav>
+    <main>
+      <!-- Home -->
+      <div class="home">
+          <div class="intro">
+            <!-- <p>Data Analytics & Machine Learning Enthusiast</p> -->
+            <h1>Hi, I'm Nishith</h1>
+            <!-- <h1>I'm into<p class="typing-text">I'm into</p></h1> -->
+             <div class="auto-typing">
+              <h1>I'm into <span class="typing-text"></span></h1>
+             </div>
+            <h1>From Chaitanya Bharathi Institute of Technology(CBIT)</h1>
+          </div>
+          <div class="image">
+            <img
+              src="./Images/WhatsApp Image 2025-05-24 at 13.38.02_2937dbcc.jpg"
+              alt=""
+            />
+          </div>
+          
+      </div>
+
+      <!-- About -->
+      <div class="about">
+
+          <div class="info">
+            <h1>About me</h1>
+            <p class="para">
+I am a motivated and detail-oriented individual currently pursuing a Bachelor of Engineering in CSE with AIML (2023–2027) at Chaitanya Bharathi Institute of Technology, with a CGPA of 8.94/10. I have a strong foundation in web development, Python, and Data Structures & Algorithms (DSA). I enjoy building scalable, user-friendly applications and take pride in writing clean, maintainable code. My problem-solving skills and interest in debugging allow me to optimize algorithms for high performance. I have experience collaborating with cross-functional teams to develop innovative solutions. I’ve recently started exploring Machine Learning and am currently in the beginner stage, actively building my knowledge through courses and hands-on practice. I’m committed to continuous learning and staying updated with the latest technologies in the field.
+
+            </p>
+            <div class="row">
+              <p class="tab-link active-link">Skills</p>
+              <p class="tab-link">Experience</p>
+              <p class="tab-link">Education</p>
+            </div>
+            <div class="content">
+              <ul onclick="this.style.display='none'">
+                <li><span>Programming Languages</span><br>Proficient in JavaScript, Python, and R language for general-purpose programming and data analysis.</li>
+                <li><span>Frontend Development</span><br>Designed responsive user interfaces using HTML, CSS, Bootstrap, and Chakra UI.</li>
+                <li><span>Backend Development</span><br>Built server-side applications and APIs using Node.js and Express.js.</li>
+                <li><span>Frameworks</span><br>Developed interactive web applications using React JS.</li>
+                <li><span>Databases</span><br>Managed and queried data using MySQL and MongoDB.</li>
+              </ul>
+            </div>
+          </div>
+      </div>
+
+      <!-- services -->
+      <div class="projects">
+        <h1 >My Latest works</h1>
+        <div class="container">
+          <div class="box">
+            <img src="./Images/Forecast.png" alt="" />
+            <div class="box-content">
+              <h3>Weather Forecast</h3>
+              <p>
+The Weather Forecast Web App is a responsive React.js app that shows real-time weather using a weather API.
+It supports city-based search and features smooth animations for a better user experience.
+Designed with a clean UI, it provides accurate and up-to-date weather information. GitHub            </p>
+            </div>
+          </div>
+          <div class="box">
+            <img src="./Images/RecipeBox.png" alt="" />
+            <div class="box-content">
+              <h3>Recipe Box</h3>
+              <p>
+                The Recipe Generating Web Platform is a MERN stack app for sharing and discovering recipes.
+It includes ingredient-based search, sorting/filtering, and a responsive UI with light/dark mode.
+Search is optimized for fast and easy recipe discovery.
+              </p>
+            </div>
+          </div>
+          <div class="box">
+            <img
+              src="./Images/Meme_generator.png"
+              alt=""
+            />
+            <div class="box-content">
+              <h3>Meme Generator</h3>
+              <p>
+The Meme Generator is a React.js app that creates random memes using an external API.
+It features state management, controlled components, and uses useEffect for data fetching.
+Built for fun, it's a quick and interactive way to generate memes.
+              </p>
+
+            </div>
+          </div>
+        </div>
+        <!-- container -->
+         <a href="./project_grid.html"><button>See more</button></a>
+      </div>
+      <!-- contacts -->
+      <div class="contact">
+          <div class="contactme">
+            <h1>Contact Me</h1>
+            <p><i class="fa-solid fa-envelope"></i> nishithvadla@gmail.com</p>
+            <div class="icons">
+              <a href="https://www.linkedin.com/in/nishith-vadla-032799287/" target="_blank"
+                ><i class="fa-brands fa-linkedin"></i
+              ></a>
+              <a href="https://github.com/Itz-Secret" target="_blank"
+                ><i class="fa-brands fa-github"></i
+              ></a>
+              <!-- Empty images can be removed -->
+            </div>
+            <button>
+              <a href="./Nishith_Resume.pdf" download>Download CV</a>
+            </button>
+          </div>
+          <form name="submit-to-google-sheet">
+            <input type="text" name="Name" placeholder="Your name" required />
+            <input
+              type="email"
+              name="email"
+              placeholder="Your email"
+              required
+            />
+            <textarea
+              name="message"
+              rows="6"
+              placeholder="Your message"
+              id=""
+            ></textarea>
+            <input type="submit" />
+          </form>
+        <!-- container -->
+      </div>
+      <!-- contact -->
+    </main>
+    <script>
+
+      var detail=false
+      const details=document.querySelector('ul')
+      function handleHamburger(){
+        if(detail===false){
+          details.style.display='none'
+          detail=true
+        }else{
+          details.style.display='block'
+          detail=false
+        }
+      }
+      details.addEventListener('click',()=>{
+        if(detail===false && details.style.display==='block' ){
+          details.style.display='none'
+        }}
+      )
+
+      // auto typing
+      const texts=['Web development','Machine Learning']
+      const typingElement = document.querySelector(".typing-text");
+      let currentText=""
+      let i=0
+      let isDeleting=false
+      let textIndex=0
+      function typeLoop(){
+        if(isDeleting){
+          currentText=texts[textIndex].substring(0,i--)
+        }else{
+          currentText=texts[textIndex].substring(0,i++)
+        }
+        if (!isDeleting && i==texts[textIndex].length){
+          typingElement.innerText=currentText
+          setTimeout(typeLoop, 200);
+          isDeleting=true
+      }else if(isDeleting && i==-1){
+          setTimeout(typeLoop, 200);
+          isDeleting=false
+          textIndex = textIndex === 0 ? 1 : 0;
+      }else{
+        typingElement.innerText=currentText
+          setTimeout(typeLoop, 120);
+      }
+      }
+      document.addEventListener("DOMContentLoaded", () => {
+        typeLoop();
+      });
+
+      const scriptURL =
+        "https://script.google.com/macros/s/AKfycbw-7HMbKjdxJUE6U5WW1217Iwp6L-mwlwmQXF5LGVx7JbJ4Blz8X56P0DujBGOXDMvr/exec";
+      const form = document.forms["submit-to-google-sheet"];
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then((response) => {
+            alert("Thank you! Your message has been sent.");
+            form.reset(); // clear the form
+          })
+          .catch((error) => console.error("Error!", error.message));
+      });
+
+      const tabs = document.getElementsByClassName("tab-link");
+      const content = document.getElementsByClassName("content")[0];
+      for (let i = 0; i < tabs.length; i++) {
+        tabs[i].addEventListener("click", function handleClick() {
+          for (let j = 0; j < tabs.length; j++) {
+            tabs[j].classList.remove("active-link");
+          }
+
+          this.classList.add("active-link");
+
+          const tabText = this.innerText;
+          if (tabText === "Skills") {
+            content.innerHTML = `
+<ul>
+    <li><span>Programming Languages</span><br>Proficient in JavaScript, Python, and R language for general-purpose programming and data analysis.</li>
+    <li><span>Frontend Development</span><br>Designed responsive user interfaces using HTML, CSS, Bootstrap, and Chakra UI.</li>
+    <li><span>Backend Development</span><br>Built server-side applications and APIs using Node.js and Express.js.</li>
+    <li><span>Frameworks</span><br>Developed interactive web applications using React JS.</li>
+    <li><span>Databases</span><br>Managed and queried data using MySQL and MongoDB.</li>
+</ul>
+
+
+`;
+          } else if (tabText === "Experience") {
+            content.innerHTML =
+              "<strong><i>I’m currently building my skills through hands-on projects and continuous learning. I would be grateful for </br> any opportunity to prove my potential and gain practical experience in the field.</i></strong>";
+          } else {
+            content.innerHTML = `
+                <ul>
+                  <li><span>2023-present</span><br>Studying B.E, CSE with AIML at Chaitanya Bharati Institute of Technology(CBIT) </li>
+                  <li><span>2021-23</span><br>Intermediate (TSBIE)(Secured 98.1%)</li>
+                  <li><span>2020-21</span><br>Secondary school from SPR school of Excellence</li>
+                </ul>`;
+          }
+        });
+      }
+      const skills = document.querySelectorAll("header ul li")[2]
+        const experience = document.querySelectorAll("header ul li")[3]
+        skills.addEventListener('click',function handleSkill(){
+            for (let j = 0; j < tabs.length; j++) {
+              tabs[j].classList.remove('active-link');
+            }
+            tabs[0].classList.add('active-link');
+             content.innerHTML = `
+<ul>
+    <li><span>Programming Languages</span><br>Proficient in JavaScript, Python, and R language for general-purpose programming and data analysis.</li>
+    <li><span>Frontend Development</span><br>Designed responsive user interfaces using HTML, CSS, Bootstrap, and Chakra UI.</li>
+    <li><span>Backend Development</span><br>Built server-side applications and APIs using Node.js and Express.js.</li>
+    <li><span>Frameworks</span><br>Developed interactive web applications using React JS.</li>
+    <li><span>Databases</span><br>Managed and queried data using MySQL and MongoDB.</li>
+</ul>
+
+`;
+        })
+        experience.addEventListener('click',function handleExperience(){
+            for (let j = 0; j < tabs.length; j++) {
+              tabs[j].classList.remove('active-link');
+            }
+            tabs[1].classList.add('active-link');
+            content.innerHTML ="<strong><i>I’m currently building my skills through hands-on projects and continuous learning. I would be grateful for </br> any opportunity to prove my potential and gain practical experience in the field.</i></strong>";
+;
+        })
+    </script>
+  </body>
+</html>

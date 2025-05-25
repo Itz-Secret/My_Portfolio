@@ -1,0 +1,495 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Edu+QLD+Beginner:wght@400..700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+body{
+    background-color: #02010a;
+    color: rgb(200, 198, 198);
+}
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #02010a;
+    position: fixed;
+     z-index: 1000;
+}
+
+.heading i{
+    display: none;
+}
+
+header {
+    width: 90%;
+    max-width: 1200px;
+    padding: 15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    color: white;
+}
+
+header h1{
+    font-family: "Edu QLD Beginner", cursive;
+    font-size: 2.25em;
+    color: whitesmoke;
+}
+header ul li{
+    font-size: 1.15em;
+    cursor: pointer;
+    position: relative;
+}
+header ul li::after{
+    content: "";
+    position: absolute;
+    background-color: #297dd1;
+    width: 0;
+    height: 3px;
+    left: 0;
+    bottom: -6px;
+    border-radius: 2px;
+    transition: 0.5s;
+}
+header ul li:hover::after{
+    width: 100%;
+}
+header ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+
+}
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.home {
+    width: 90%;
+    max-width: 1200px;
+    margin: 50px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.home .image {
+    max-width: 90%;
+    flex: 1 1 300px;
+}
+
+.home .intro {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1 1 300px;
+}
+.typing-text {
+    font-weight: 700;
+    color: #0466c8;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid whitesmoke;
+    animation: blink 1s infinite;
+}
+
+.home .image img{
+    width: 100%;
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+main .home .intro p{
+    font-size: 1.5em;
+}
+main .home .intro h1{
+    font-weight: 700;
+    color: whitesmoke;
+    font-size: 2.5em;
+}
+/* about */
+.about {
+    width: 90%;
+    max-width: 1200px;
+    margin: 50px auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.about .image {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+}
+.about .info {
+    flex: 1 1 300px;
+    min-width: 250px;
+}
+.info h1{
+    font-size: 2.875em;
+}
+
+.info .para{
+    margin: 20px 0;
+}
+.about img{
+    border-radius: 10px;
+    height: 100%;
+}
+.row{
+    display: flex;
+    max-width: 500px;
+    justify-content: space-between;
+    font-weight: 500;
+}
+.row .tab-link{
+    cursor: pointer;
+    position: relative;
+
+}
+.row .tab-link::after{
+    content: "";
+    position: absolute;
+    background: #297dd1;
+    width: 0%;
+    height: 3px;
+    left: 0;
+    bottom: -6px;
+    border-radius: 2px;
+    transition: 0.5s;
+}
+.row .tab-link.active-link::after{
+    width: 50%;
+}
+.content{
+    padding: 20px 0;
+}
+
+.content ul li{
+    list-style: none;
+    margin: 15px 0;
+}
+.content ul li span{
+    color: #0466c8;
+    font-size: 1.125em;
+}
+/* projects */
+.projects {
+    width: 90%;
+    max-width: 1200px;
+    margin: 50px auto;
+    margin-top: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+.projects button,.project a button{
+    cursor: pointer;
+    border: none;
+    padding: 15px 25px;
+    background-color: #0466c8;
+    border: 2px solid #0466c8;
+    color: whitesmoke;
+    font-weight: bold;
+    border-radius: 5px;
+}
+.projects button a,.project a{
+    text-decoration: none;
+    color: whitesmoke;
+}
+.projects button:hover,.project a button:hover{
+    background-color: transparent;
+    border: 2px solid whitesmoke;
+    box-shadow: 0px 0px 7px 0.1px whitesmoke;
+}
+.container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+.box{
+    max-width: 300px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 0px 1px whitesmoke;
+    /* margin-right: auto; */
+}
+.box-content{
+    padding: 16px;
+}
+.box-content h3{
+    margin-bottom: 8px;
+    color: #0466c8;
+    text-decoration: underline;
+}
+.box-content p{
+    font-size: 0.938em;
+    line-height: 1.3;
+}
+.box img{
+    width: 100%;
+    height: 150px;
+}
+.box:hover h3{
+    text-decoration: underline;
+    color: #c80404;
+}
+.box:hover img{
+    transition: 0.5s;
+    overflow: hidden;
+    transform: scale(1.2);
+}
+
+/* Contacts */
+.contact{
+    width: 90%;
+    max-width:1200px;
+    margin: 50px 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.contact h1{
+    font-size: 2.5em;
+    padding: 20px 0;
+}
+.contact p{
+    font-size: 1.25em;
+    margin-bottom: 0px;
+}
+.contact p i{
+    color: #0466c8;
+    font-size: 1.563em;
+    margin-right:15px;
+}
+.contact .contactme .icons a i{
+    color: #0466c8;
+    font-size: 1.563em;
+    margin: 10px;
+    margin-left: 0px;
+}
+.icons a i:hover{
+    transform: translateY(-6px);
+    transition: 0.5s;
+
+}
+.icons a:visited{
+    color: #0466c8;
+}
+.contactme button{
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #0466c8;
+    border: none;
+    border-radius: 2px;
+    color: whitesmoke;
+    cursor: pointer;
+}
+.contactme button:hover{
+    /* display: block; */
+    /* filter: drop-shadow(0 0 10px blue); */
+    background: linear-gradient(45deg,#00162c,#00254a,#0059b1,#0466c8,#2e93f8)
+
+}
+.contactme button a{
+    text-decoration: none;
+    color: whitesmoke;
+}
+.contactme button a:visited{
+    color: whitesmoke;
+}
+form{
+    flex-grow: 0.5;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form input,textarea{
+    flex-grow: 1;
+    padding: 7px;
+    border: none;
+    border-radius: 5px;
+}
+form input[type="submit"] {
+    background-color: #0466c8;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+
+}
+form input[type="submit"]:hover{
+    background: linear-gradient(45deg,#00162c,#00254a,#0059b1,#0466c8,#2e93f8)
+}
+
+.projects h1{
+    font-size: 54px;
+    text-align: center;
+}
+
+.auto-typing h1 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 2.5rem;
+}
+
+@media (max-width:1024px) {
+
+main .home .intro h1{
+    font-size: 2.1rem;
+}
+.box{
+    width: 250px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 0px 1px whitesmoke;
+}
+    
+}
+
+@media (max-width:768px) {
+    .home{
+        flex-direction: column-reverse;
+    }
+    nav{
+        position: static;
+        display: flex;
+    }
+    header{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    header ul{
+        display: none;
+        /* flex-direction: column; */
+    }
+    header ul li{
+        margin: 15px 0;
+    }
+    
+    /* header ul li{
+        display: none;
+    } */
+
+    .home{
+        margin-top: 0px;
+    }
+    .about .image{
+        display: none;
+    }
+    .heading{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .heading i{
+        font-size: 2.25em;
+        display: block;
+    }
+    .container{
+    margin: auto;
+    align-self: center;
+}
+}
+
+@media (max-width:578px) {
+    main .home .intro h1{
+        font-size: 1.7em;
+    }
+    main .home{
+        margin-bottom: 0;
+    }
+    main .about{
+        margin-top: 0;
+    }
+
+    .row{
+        max-width: 300px;
+    }
+    .contact{
+        flex-direction: column;
+    }
+    .contact form{
+        flex-grow: 1;
+    }
+
+.projects h1{
+    font-size: 40px;
+}
+.container{
+    justify-content: center;
+}
+
+.box{
+    width: 300px;
+}
+
+}
+
+@media (max-width:376px){
+    main .home .intro h1{
+        font-size: 1.65em;
+    }
+
+
+}
+
+@media (max-width:321px){
+
+    header h1{
+        font-size: 2em;
+    }
+
+    main .home .intro p{
+        font-size: 1.2em;
+    }
+
+    main .home .intro h1{
+        font-size: 1.6em;
+    }
+
+    .about .info{
+        min-width: 300px;
+    }
+
+}
+
+/* FOR PROJECTS PAGE */
+.project_grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.project{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+}
